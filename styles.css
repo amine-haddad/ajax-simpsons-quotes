@@ -1,0 +1,126 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Section principale */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Titre principal */
+  .title {
+    font-size: 2.5rem;
+    color: #ffca28;
+    text-shadow: 1px 1px 2px #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Bouton pour générer une nouvelle citation */
+  button {
+    background-color: #ffca28;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffc107;
+  }
+  
+  /* Style pour les cartes */
+  #simpsons-quotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .simpson-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    overflow: visible; /* Permet à la bulle de dépasser */
+  }
+  
+  .simpson-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #ffca28;
+    margin-bottom: 15px;
+  }
+  
+  .simpson-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Style pour la bulle de citation */
+  .quote-bubble {
+    position: absolute;
+    top: 50%;
+    left: 110%; /* Décale la bulle à droite de la carte */
+    transform: translateY(-50%);
+    background-color: #ffca28;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    min-width: 250px; /* Largeur minimale égale à celle de la carte */
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .quote-bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Place le triangle au centre de la bulle */
+    left: -10px; /* Décale le triangle à gauche de la bulle */
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ffca28 transparent transparent;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .simpson-card {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    .simpson-card img {
+      width: 120px;
+    }
+  
+    .quote-bubble {
+      left: 100%; /* Réduit l'écart pour petits écrans */
+      max-width: 200px;
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  }
+  
